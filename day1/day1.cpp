@@ -18,7 +18,12 @@ int main() {
             calorieSum+= std::stoi(str);
         }
     }
-    std::cout << pq.top() << std::endl;
+    int top3total = 0;
+    for(int i=0; i<3; ++i) {
+    top3total += pq.top();
+    pq.pop();
+    }
+    std::cout << top3total << std::endl;
     //std::cout << "Hello World!" << std::endl;
     return 0;
 }
