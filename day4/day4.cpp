@@ -19,31 +19,13 @@ void findOverlap(const int& one, const int& two, const int& three, const int& fo
     auto p1 = std::make_pair(one,two);
     auto p2 = std::make_pair(three,four);
 
-    if(p1.first <= p2.first && p1.second >= p2.second) {
+    if(p1.first <= p2.first && p1.second >= p2.first) {
         score++;
     }
-    else if(p2.first <= p1.first && p2.second >= p1.second) {
+    else if(p2.first <= p1.first && p2.second >= p1.first) {
         score++;
     }
-    
-    /*std::size_t len1 = two-one;
-    std::size_t len2 = four-three;
-    std::vector<int> zone1(len1);
-    std::vector<int> zone2(len2);
-    std::vector<int> intersect;
-
-    std::iota(zone1.begin(), zone1.end(), one);
-    std::iota(zone2.begin(), zone2.end(), three);
-
-    std::set_intersection(zone1.begin(),zone1.end(),
-                          zone2.begin(),zone2.end(),
-                          back_inserter(intersect));
-
-    if(intersect == zone1 || intersect==zone2) {
-        score++;
-    }*/
-
-    
+        
 }
 
 int main() {
